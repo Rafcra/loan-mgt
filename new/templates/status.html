@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="card card-signup" data-background-color="red">
+        
+          <div class="card-header text-center">
+            <h3 class="card-title title-up">Check your status</h3>
+          </div>
+          <form action="/status" method="post">
+              <div class="card-body">
+                <div class="input-group no-border">
+                  <input type="text" class="form-control" name="appstatus" id="appstatus" placeholder="Enter Customer ID">
+                </div>
+              </div>
+              <div class="card-footer text-center">
+                <button type="submit" class="btn btn-neutral btn-round btn-lg">
+                    Check
+                       <!-- <a href="#pablo" class="btn btn-neutral btn-round btn-lg" style="text-decoration: none;">Check</a>-->
+                </button>
+
+              </div>
+              <div class="card-footer text-center">
+                  {{answer}}
+              </div>
+          </form>
+        
+      </div>
+    </div>
+
+    <h3>FAQs</h3>
+    <p style="font-weight: 500; width: 800px;">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem repellat magnam quidem, tenetur iusto incidunt soluta quam et hic reiciendis laborum, placeat perferendis ullam reprehenderit animi illo id impedit. Praesentium sunt possimus explicabo animi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem repellat magnam quidem, tenetur iusto incidunt soluta quam et hic reiciendis laborum, placeat perferendis ullam reprehenderit animi illo id impedit. Praesentium sunt possimus explicabo animi.
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

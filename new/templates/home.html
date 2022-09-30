@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="card card-signup" data-background-color="red">
+        <form class="form" method="POST" action="">
+          <div class="card-header text-center">
+            <h3 class="card-title title-up">Loan Application</h3>
+          </div>
+          <div class="card-body">
+            <div class="input-group no-border">
+              First Name &nbsp;<input type="text" name="first_name" class="form-control" placeholder="Enter First Name">
+            </div>
+            <div class="input-group no-border">
+              Last Name &nbsp;<input type="text" name="last_name" class="form-control" placeholder="Enter Last Name">
+            </div>
+            <div class="input-group no-border">
+              Date of Birth &nbsp;<input type="date" name="birthdate" class="form-control">
+            </div>
+            <div class="input-group no-border">
+              Address &nbsp;<input type="text" name="address" class="form-control" placeholder="Enter Address">
+            </div>
+            <div class="input-group no-border">
+              Phone &nbsp;<input type="text" name="phone" class="form-control" placeholder="Enter Phone">
+            </div>
+            <div class="input-group no-border">
+              Email &nbsp;<input type="email" name="email" class="form-control" placeholder="Enter Email">
+            </div>
+            <div class="input-group no-border">
+              Amount &nbsp;<input type="text" name="amount_applied" class="form-control" placeholder="Enter Loan">
+            </div>
+            <div class="input-group no-border">
+              Duration &nbsp;<input type="text" name="duration_applied" class="form-control" placeholder="Enter Duration">
+              
+            </div>
+            <div class="input-group no-border">
+              Employer: &nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="text" id="employer" name="employer" class="form-control" placeholder="Enter Employer">
+            </div>
+
+          </div>
+          <div class="card-footer text-center">
+            <button type="submit" class="btn btn-neutral btn-round btn-lg" id="submit">
+                Submit
+            </button>
+          </div>
+
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              {% endfor %}c
+            {% endif %}
+          {% endwith %}
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

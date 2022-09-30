@@ -1,0 +1,12 @@
+{
+  "params":
+  {
+    "local_uri": "postgresql+psycopg2://postgres:12345@localhost/loan_management",
+    "production_uri": "",
+    "database": "loan_management",
+    "db_username": "root",
+    "db_password": "7659939242",
+    "admin_username": "admin",
+    "admin_password": "password"
+  }
+}
